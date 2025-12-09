@@ -1,0 +1,42 @@
+{
+  "name": "openrouter-usage",
+  "displayName": "OpenRouter Usage",
+  "description": "Show remaining OpenRouter key limit in the VS Code status bar",
+  "version": "0.0.1",
+  "publisher": "your-name-or-handle",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "openrouterUsage.refresh",
+        "title": "OpenRouter Usage: Refresh"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "OpenRouter Usage",
+      "properties": {
+        "openrouterUsage.apiKey": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Your OpenRouter API key (sk-or-v1-...). Stored in plain text. Alternatively set the OPENROUTER_API_KEY environment variable."
+        },
+        "openrouterUsage.refreshIntervalMinutes": {
+          "type": "number",
+          "default": 10,
+          "minimum": 0,
+          "markdownDescription": "Minutes between automatic refreshes of OpenRouter usage. Set to 0 to disable auto refresh."
+        }
+      }
+    }
+  }
+}

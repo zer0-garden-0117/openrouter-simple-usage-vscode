@@ -1,0 +1,98 @@
+# 💵 OpenRouter Usage
+
+> Keep track of your OpenRouter API credits right in VS Code's status bar!
+
+![VS Code](https://img.shields.io/badge/VS%20Code-^1.90.0-blue?logo=visualstudiocode)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+
+## ✨ Features
+
+- **💵 Real-time balance** — See your remaining OpenRouter credits at a glance
+- **🚨 Low balance alert** — Status bar turns to warning when credits drop below $20
+- **🔄 Auto-refresh** — Automatically updates your balance (configurable interval)
+- **⚡ Manual refresh** — Click the status bar or run the command to refresh instantly
+
+
+## 📸 Preview
+
+| Status | Display |
+|--------|---------|
+| Normal | `💵 195.0/200$` |
+| Low balance (≤$20) | `🚨 15.0/200$` |
+| Loading | `💵 loading...` |
+| Fetching | `💵 ...` |
+| No API key | `💵 no key` |
+| Error | `🚨 error` |
+
+
+## 🚀 Getting Started
+
+### 1. Install the Extension
+
+Install from the VS Code Marketplace or load it manually.
+
+### 2. Configure Your API Key
+
+You have two options:
+
+**Option A: VS Code Settings**
+1. Open Settings (`Ctrl+,` / `Cmd+,`)
+2. Search for `openrouterUsage.apiKey`
+3. Enter your OpenRouter API key (`sk-or-v1-...`)
+
+**Option B: Environment Variable**
+```bash
+export OPENROUTER_API_KEY="sk-or-v1-your-key-here"
+```
+
+
+## ⚙️ Configuration
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `openrouterUsage.apiKey` | `""` | Your OpenRouter API key |
+| `openrouterUsage.refreshIntervalMinutes` | `10` | Auto-refresh interval in minutes (0 to disable) |
+
+
+## 📋 Commands
+
+| Command | Description |
+|---------|-------------|
+| `OpenRouter Usage: Refresh` | Manually refresh your usage stats |
+
+> 💡 **Tip:** Click the status bar item to quickly refresh!
+
+
+## 🔒 Security Note
+
+Your API key is stored in VS Code's settings (plain text). For better security, consider using the `OPENROUTER_API_KEY` environment variable instead.
+
+
+## 📊 Tooltip Details
+
+Hover over the status bar item to see detailed usage info:
+
+- Remaining credits
+- Total used
+- Daily usage
+- Weekly usage
+- Monthly usage
+- Free tier status
+- Reset time (if applicable)
+
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+
+## 📄 License
+
+MIT © Philippe Soubrier
+
+---
+
+<p align="center">
+  Made with ❤️ for the OpenRouter community
+</p>
