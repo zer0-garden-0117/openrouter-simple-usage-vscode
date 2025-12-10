@@ -3,7 +3,7 @@
   "displayName": "OpenRouter Usage",
   "description": "Show remaining OpenRouter key limit in the VS Code status bar",
   "version": "0.0.1",
-  "publisher": "your-name-or-handle",
+  "publisher": "flol3622",
   "icon": "icon.png",
   "repository": {
     "type": "git",
