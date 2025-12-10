@@ -5,6 +5,10 @@
   "version": "0.0.1",
   "publisher": "your-name-or-handle",
   "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flol3622/openrouter-usage-vscode.git"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
