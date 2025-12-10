@@ -4,6 +4,7 @@
   "description": "Show remaining OpenRouter key limit in the VS Code status bar",
   "version": "0.0.1",
   "publisher": "your-name-or-handle",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.90.0"
   },
