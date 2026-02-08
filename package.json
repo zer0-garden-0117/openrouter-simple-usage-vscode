@@ -2,7 +2,7 @@
   "name": "openrouter-simple-usage",
   "displayName": "OpenRouter Simple Usage",
   "description": "A minimal VS Code extension to show remaining OpenRouter credits in the status bar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "zer0sai",
   "icon": "icon.png",
   "repository": {
