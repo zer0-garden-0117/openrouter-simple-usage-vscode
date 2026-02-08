@@ -48,7 +48,7 @@ You have two options:
 
 **Option B: Environment Variable**
 ```bash
-export OPENROUTER_API_KEY="sk-or-v1-your-key-here"
+export OPENROUTER_SIMPLE_USAGE_API_KEY="sk-or-v1-your-key-here"
 ```
 
 
@@ -71,7 +71,7 @@ export OPENROUTER_API_KEY="sk-or-v1-your-key-here"
 
 ## 🔒 Security Note
 
-Your API key is stored in VS Code's settings (plain text). For better security, consider using the `OPENROUTER_API_KEY` environment variable instead.
+Your API key is stored in VS Code's settings (plain text). For better security, consider using the `OPENROUTER_SIMPLE_USAGE_API_KEY` environment variable instead.
 
 ## 🙏 Acknowledgments
 

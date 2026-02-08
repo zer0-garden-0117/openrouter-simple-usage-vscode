@@ -33,7 +33,7 @@
         "openrouterUsage.apiKey": {
           "type": "string",
           "default": "",
-          "markdownDescription": "Your OpenRouter API key (sk-or-v1-...). Stored in plain text. Alternatively set the OPENROUTER_API_KEY environment variable."
+          "markdownDescription": "Your OpenRouter API key (sk-or-v1-...). Stored in plain text. Alternatively set the OPENROUTER_SIMPLE_USAGE_API_KEY environment variable."
         },
         "openrouterUsage.refreshIntervalMinutes": {
           "type": "number",

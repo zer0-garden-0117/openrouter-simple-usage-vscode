@@ -57,7 +57,7 @@ function getApiKeyFromConfig() {
     return fromSetting.trim();
   }
 
-  const fromEnv = process.env.OPENROUTER_API_KEY;
+  const fromEnv = process.env.OPENROUTER_SIMPLE_USAGE_API_KEY;
   if (fromEnv && fromEnv.trim() !== "") {
     return fromEnv.trim();
   }
@@ -84,10 +84,10 @@ function activate(context) {
     const apiKey = getApiKeyFromConfig();
     if (!apiKey) {
       statusBarItem.text = "💵 no key";
-      statusBarItem.tooltip = "Set openrouterUsage.apiKey in settings or OPENROUTER_API_KEY env var";
+      statusBarItem.tooltip = "Set openrouterUsage.apiKey in settings or OPENROUTER_SIMPLE_USAGE_API_KEY env var";
       if (showNotifications) {
         vscode.window.showWarningMessage(
-          "OpenRouter Usage: no API key configured. Set openrouterUsage.apiKey in settings or OPENROUTER_API_KEY env var."
+          "OpenRouter Usage: no API key configured. Set openrouterUsage.apiKey in settings or OPENROUTER_SIMPLE_USAGE_API_KEY env var."
         );
       }
       return;
