@@ -103,7 +103,7 @@ function activate(context) {
       const used = info.total_usage;
       const remaining = limit - used;
 
-      const remainingShort = remaining.toFixed(1);
+      const remainingShort = (Math.floor(remaining * 10) / 10).toFixed(1);
       const usedShort = used.toFixed(1);
 
       let emoji = "💵";
