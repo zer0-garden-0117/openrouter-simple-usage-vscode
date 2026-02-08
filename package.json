@@ -22,24 +22,24 @@
   "contributes": {
     "commands": [
       {
-        "command": "openrouterUsage.refresh",
-        "title": "OpenRouter Usage: Refresh"
+        "command": "openrouterSimpleUsage.refresh",
+        "title": "OpenRouter Simple Usage: Refresh"
       }
     ],
     "configuration": {
       "type": "object",
       "title": "OpenRouter Simple Usage",
       "properties": {
-        "openrouterUsage.apiKey": {
+        "openrouterSimpleUsage.apiKey": {
           "type": "string",
           "default": "",
           "markdownDescription": "Your OpenRouter API key (sk-or-v1-...). Stored in plain text. Alternatively set the OPENROUTER_SIMPLE_USAGE_API_KEY environment variable."
         },
-        "openrouterUsage.refreshIntervalMinutes": {
+        "openrouterSimpleUsage.refreshIntervalMinutes": {
           "type": "number",
           "default": 10,
           "minimum": 0,
-          "markdownDescription": "Minutes between automatic refreshes of OpenRouter usage. Set to 0 to disable auto refresh."
+          "markdownDescription": "Minutes between automatic refreshes of OpenRouter simple usage. Set to 0 to disable auto refresh."
         }
       }
     }

@@ -50,7 +50,7 @@ async function fetchKeyInfo(apiKey) {
  * Get API key from config or from environment.
  */
 function getApiKeyFromConfig() {
-  const config = vscode.workspace.getConfiguration("openrouterUsage");
+  const config = vscode.workspace.getConfiguration("openrouterSimpleUsage");
   const fromSetting = config.get("apiKey");
 
   if (fromSetting && fromSetting.trim() !== "") {
@@ -74,8 +74,8 @@ function activate(context) {
     100
   );
   statusBarItem.text = "💵 loading...";
-  statusBarItem.tooltip = "OpenRouter usage";
-  statusBarItem.command = "openrouterUsage.refresh";
+  statusBarItem.tooltip = "OpenRouter Simple Usage";
+  statusBarItem.command = "openrouterSimpleUsage.refresh";
   statusBarItem.show();
 
   let refreshTimer = null;
@@ -83,7 +83,7 @@ function activate(context) {
   async function refreshUsage(showNotifications) {
     const apiKey = getApiKeyFromConfig();
     if (!apiKey) {
-      statusBarItem.text = "💵 no key";
+      statusBarItem.text = "💵 no key"; 
       statusBarItem.tooltip = "Set openrouterUsage.apiKey in settings or OPENROUTER_SIMPLE_USAGE_API_KEY env var";
       if (showNotifications) {
         vscode.window.showWarningMessage(
@@ -138,7 +138,7 @@ function activate(context) {
 
   // Command to refresh manually
   const refreshCommand = vscode.commands.registerCommand(
-    "openrouterUsage.refresh",
+    "openrouterSimpleUsage.refresh",
     async () => {
       await refreshUsage(true);
     }
@@ -147,7 +147,7 @@ function activate(context) {
   context.subscriptions.push(statusBarItem, refreshCommand);
 
   function setupAutoRefresh() {
-    const config = vscode.workspace.getConfiguration("openrouterUsage");
+    const config = vscode.workspace.getConfiguration("openrouterSimpleUsage");
     const minutes = config.get("refreshIntervalMinutes") || 10;
 
     if (refreshTimer) {
@@ -175,7 +175,7 @@ function activate(context) {
 
   // React to config changes
   const configWatcher = vscode.workspace.onDidChangeConfiguration(e => {
-    if (e.affectsConfiguration("openrouterUsage")) {
+    if (e.affectsConfiguration("openrouterSimpleUsage")) {
       setupAutoRefresh();
       refreshUsage(false);
     }
