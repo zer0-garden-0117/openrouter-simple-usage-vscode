@@ -1,13 +1,13 @@
 {
-  "name": "openrouter-usage",
-  "displayName": "OpenRouter Usage",
-  "description": "Show remaining OpenRouter key limit in the VS Code status bar",
+  "name": "openrouter-simple-usage",
+  "displayName": "OpenRouter Simple Usage",
+  "description": "A minimal VS Code extension to show remaining OpenRouter credits in the status bar",
   "version": "0.0.1",
-  "publisher": "flol3622",
+  "publisher": "zer0",
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/flol3622/openrouter-usage-vscode.git"
+    "url": "https://github.com/zer0-garden-0117/openrouter-usage-vscode.git"
   },
   "engines": {
     "vscode": "^1.90.0"
@@ -28,7 +28,7 @@
     ],
     "configuration": {
       "type": "object",
-      "title": "OpenRouter Usage",
+      "title": "OpenRouter Simple Usage",
       "properties": {
         "openrouterUsage.apiKey": {
           "type": "string",

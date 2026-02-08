@@ -1,15 +1,20 @@
-# 💵 OpenRouter Usage
+# 💵 OpenRouter Simple Usage
 
-> Keep track of your OpenRouter API credits right in VS Code's status bar!
+> A minimal VS Code extension to keep track of your OpenRouter API credits in the status bar.
 
 ![VS Code](https://img.shields.io/badge/VS%20Code-^1.90.0-blue?logo=visualstudiocode)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## 📝 About
+
+This extension is a **fork** of [openrouter-usage-vscode](https://github.com/flol3622/openrouter-usage-vscode) by [Philippe Soubrier](https://github.com/flol3622).
+
+While the original provides detailed usage statistics, this version focuses on **simplicity** — showing only the essential credit information you need at a glance.
 
 ## ✨ Features
 
-- **💵 Real-time balance** — See your remaining OpenRouter credits at a glance
-- **🚨 Low balance alert** — Status bar turns to warning when credits drop below $20
+- **💵 Real-time balance** — See your remaining OpenRouter credits in the status bar
+- **🚨 Low balance alert** — Status bar shows warning emoji when credits drop below $10
 - **🔄 Auto-refresh** — Automatically updates your balance (configurable interval)
 - **⚡ Manual refresh** — Click the status bar or run the command to refresh instantly
 
@@ -19,7 +24,7 @@
 | Status | Display |
 |--------|---------|
 | Normal | `💵 195.0/200$` |
-| Low balance (≤$20) | `🚨 15.0/200$` |
+| Low balance (≤$10) | `🚨 9.0/200$` |
 | Loading | `💵 loading...` |
 | Fetching | `💵 ...` |
 | No API key | `💵 no key` |
@@ -68,18 +73,18 @@ export OPENROUTER_API_KEY="sk-or-v1-your-key-here"
 
 Your API key is stored in VS Code's settings (plain text). For better security, consider using the `OPENROUTER_API_KEY` environment variable instead.
 
+## 🙏 Acknowledgments
+
+- Original extension: [openrouter-usage-vscode](https://github.com/flol3622/openrouter-usage-vscode) by [Philippe Soubrier](https://github.com/flol3622)
+
 
 ## 📊 Tooltip Details
 
 Hover over the status bar item to see detailed usage info:
 
-- Remaining credits
+- Total credits
 - Total used
-- Daily usage
-- Weekly usage
-- Monthly usage
-- Free tier status
-- Reset time (if applicable)
+- Remaining credits
 
 
 ## 🤝 Contributing
@@ -89,7 +94,8 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## 📄 License
 
-MIT © Philippe Soubrier
+MIT © Philippe Soubrier (original author)
+MIT © zer0 (modifications)
 
 ---
 
