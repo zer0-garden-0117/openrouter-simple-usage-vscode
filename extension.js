@@ -2,14 +2,14 @@ const vscode = require("vscode");
 const https = require("https");
 
 /**
- * Call https://openrouter.ai/api/v1/key
+ * Call https://openrouter.ai/api/v1/credits
  * and return the "data" object from your JSON response.
  */
 async function fetchKeyInfo(apiKey) {
   return new Promise((resolve, reject) => {
     const options = {
       hostname: "openrouter.ai",
-      path: "/api/v1/key",
+      path: "/api/v1/credits",
       method: "GET",
       headers: {
         "Authorization": `Bearer ${apiKey}`,
@@ -99,16 +99,15 @@ function activate(context) {
     try {
       const info = await fetchKeyInfo(apiKey);
 
-      const limit = info.limit;                     // 200
-      const remaining = info.limit_remaining;       // 195.0116025
-      const used = info.usage;                      // 4.9883975
-      const remainingPct = limit > 0 ? (remaining / limit) * 100 : null;
+      const limit = info.total_credits;
+      const used = info.total_usage;
+      const remaining = limit - used;
 
       const remainingShort = remaining.toFixed(1);
       const usedShort = used.toFixed(1);
 
       let emoji = "💵";
-      if (remaining <= 20) {
+      if (remaining <= 10) {
         emoji = "🚨";
       }
 
@@ -116,15 +115,9 @@ function activate(context) {
       statusBarItem.text = `${emoji} ${remainingShort}/${limit}$`;
 
       let tooltip = "OpenRouter key usage\n";
-      tooltip += `Remaining: ${remaining}\n`;
+      tooltip += `Total Credits: ${limit}\n`;
       tooltip += `Used: ${used}\n`;
-      tooltip += `Daily: ${info.usage_daily}\n`;
-      tooltip += `Weekly: ${info.usage_weekly}\n`;
-      tooltip += `Monthly: ${info.usage_monthly}\n`;
-      tooltip += `Free tier: ${info.is_free_tier ? "yes" : "no"}\n`;
-      if (info.limit_reset) {
-        tooltip += `Resets at: ${info.limit_reset}\n`;
-      }
+      tooltip += `Remaining: ${remaining}\n`;
       statusBarItem.tooltip = tooltip;
 
       if (showNotifications) {
