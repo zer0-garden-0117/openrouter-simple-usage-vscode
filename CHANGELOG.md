@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4] - 2026-02-14
+
+### Changed
+
+- chore: bump version to 0.0.4
+- docs: unify README setting key names to `openrouterSimpleUsage.*`
+- docs: rename README command label to `OpenRouter Simple Usage: Refresh`
+- docs: refine README description text for clearer simplicity messaging
+
 ## [0.0.3] - 2026-02-09
 
 ### Fixed

@@ -9,7 +9,7 @@
 
 This extension is a **fork** of [openrouter-usage-vscode](https://github.com/flol3622/openrouter-usage-vscode) by [Philippe Soubrier](https://github.com/flol3622).
 
-While the original provides detailed usage statistics, this version focuses on **simplicity** — showing only the essential credit information you need at a glance.
+While the original was already streamlined, this version pushes simplicity even further — showing nothing but the essential credit information you need at a glance.
 
 ## ✨ Features
 
@@ -43,7 +43,7 @@ You have two options:
 
 **Option A: VS Code Settings**
 1. Open Settings (`Ctrl+,` / `Cmd+,`)
-2. Search for `openrouterUsage.apiKey`
+2. Search for `openrouterSimpleUsage.apiKey`
 3. Enter your OpenRouter API key (`sk-or-v1-...`)
 
 **Option B: Environment Variable**
@@ -56,15 +56,15 @@ export OPENROUTER_SIMPLE_USAGE_API_KEY="sk-or-v1-your-key-here"
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| `openrouterUsage.apiKey` | `""` | Your OpenRouter API key |
-| `openrouterUsage.refreshIntervalMinutes` | `10` | Auto-refresh interval in minutes (0 to disable) |
+| `openrouterSimpleUsage.apiKey` | `""` | Your OpenRouter API key |
+| `openrouterSimpleUsage.refreshIntervalMinutes` | `10` | Auto-refresh interval in minutes (0 to disable) |
 
 
 ## 📋 Commands
 
 | Command | Description |
 |---------|-------------|
-| `OpenRouter Usage: Refresh` | Manually refresh your usage stats |
+| `OpenRouter Simple Usage: Refresh` | Manually refresh your usage stats |
 
 > 💡 **Tip:** Click the status bar item to quickly refresh!
 
